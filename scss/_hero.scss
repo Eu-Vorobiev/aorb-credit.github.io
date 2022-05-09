@@ -1,0 +1,254 @@
+.hero {
+  padding: 150px 0px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    padding: 120px 0;
+  }
+
+  @media (max-width: 900px) {
+    padding: 60px 0 350px;
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 575px) {
+    padding: 230px 0px 50px;
+    margin-bottom: 10px;
+  }
+
+  &--span {
+    display: inline-flex;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -25px;
+      bottom: 0;
+      left: -13px;
+      right: 0;
+      background-image: url("../img/ellipse-sm.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100px;
+      height: 70px;
+      transform: rotate(11deg);
+
+      @media (max-width: 475px) {
+        top: -22px;
+        left: -11px;
+        width: 90px;
+        height: 60px;
+      }
+
+      @media (max-width: 360px) {
+        top: -18px;
+        left: -9px;
+        width: 90px;
+        height: 55px;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0;
+    top: 0px;
+
+    @media (max-width: 1200px) {
+      right: -60px;
+      max-width: 50%;
+    }
+
+    @media (max-width: 1024px) {
+      right: -20px;
+    }
+
+    @media (max-width: 900px) {
+      top: unset;
+      bottom: 0;
+      max-width: 400px;
+    }
+
+    @media (max-width: 575px) {
+      top: 10px;
+      bottom: unset;
+      right: 0;
+      max-width: 320px;
+    }
+
+    @media (max-width: 420px) {
+      right: -30px;
+    }
+
+    .sticker {
+      position: absolute;
+      top: 40px;
+      left: -50px;
+      background: #fff;
+      box-shadow: 0px 18px 32px rgba(1, 51, 45, 0.08);
+      border-radius: 24px;
+      padding: 24px 32px 32px;
+      width: 275px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media (max-width: 1200px) {
+        top: 10px;
+        left: -70px;
+      }
+
+      @media (max-width: 1100px) {
+        left: -90px;
+      }
+
+      @media (max-width: 1024px) {
+        top: 0;
+        left: -40px;
+        padding: 16px 20px 20px;
+        width: 220px;
+      }
+
+      @media (max-width: 900px) {
+        top: 10px;
+        left: -90px;
+      }
+
+      @media (max-width: 575px) {
+        padding: 12px 16px;
+        width: 210px;
+        top: -10px;
+      }
+
+      @media (max-width: 380px) {
+        width: 150px;
+        padding: 5px 5px 10px;
+        left: -20px;
+      }
+
+      p {
+        margin-bottom: 32px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: $black;
+
+        @media (max-width: 768px) {
+          margin-bottom: 20px;
+          font-size: 16px;
+        }
+
+        @media (max-width: 380px) {
+          margin-bottom: 12px;
+          font-size: 13px;
+        }
+      }
+
+      span {
+        padding: 14px 18px;
+        background: rgba(8, 166, 82, 0.1);
+        border-radius: 15px;
+        display: flex;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: $accent;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+        }
+
+        @media (max-width: 380px) {
+          font-size: 16px;
+          padding: 5px 8px;
+        }
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 575px) {
+      align-items: center;
+    }
+  }
+
+  &__content {
+    max-width: 500px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 150px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-bottom: 100px;
+    }
+
+    @media (max-width: 900px) {
+      margin-bottom: 50px;
+      max-width: 100%;
+      align-self: center;
+      align-items: center;
+    }
+
+    @media (max-width: 575px) {
+      margin-bottom: 20px;
+      padding: 25px 5px;
+      background: rgba(white, .8);
+      border-radius: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    color: $black;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    align-self: flex-start;
+    animation: flash 2s ease-in-out infinite;
+
+    @media (max-width: 900px) {
+      align-self: center;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 16px;
+      padding: 12px 32px;
+    }
+  }
+}

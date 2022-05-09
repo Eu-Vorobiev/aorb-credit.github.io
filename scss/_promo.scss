@@ -1,0 +1,133 @@
+.promo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+
+  @media (max-width: 768px) {
+    overflow: hidden;
+  }
+
+  .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: linear-gradient(180deg, rgba(218, 248, 255, 0) 0%, rgba(218, 248, 255, 0.36) 19.64%, rgba(218, 248, 255, 0.6) 41.22%, #DAF8FF 66.05%);
+    transform: rotate(0deg);
+    height: 100%;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  &__bg {
+    position: relative;
+    z-index: 10;
+    min-width: 450px;
+
+    @media (max-width: 1023px) {
+      width: 550px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    @media (max-width: 575px) {
+      width: 460px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__content {
+    max-width: 630px;
+    padding-bottom: 30px;
+
+    @media (max-width: 1023px) {
+      max-width: 100%;
+      background: rgba(#DAF8FF, .8);
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      padding: 30px 0px 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 48px;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+
+    span {
+      display: inline-flex;
+      position: relative;
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        top: -30px;
+        left: -7px;
+        content: '';
+        background-image: url("../img/ellipse-lg.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 105%;
+        height: 130px;
+
+        @media (max-width: 1023px) {
+          top: -25px;
+        }
+
+        @media (max-width: 768px) {
+          top: -20px;
+        }
+
+        @media (max-width: 475px) {
+          top: -15px;
+        }
+      }
+    }
+  }
+
+  &__caption {
+    margin-bottom: 30px;
+    color: $black;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    @media (max-width: 475px) {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.04em;
+    color: rgba(1, 51, 45, 0.8);
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 16px;
+    }
+  }
+}
